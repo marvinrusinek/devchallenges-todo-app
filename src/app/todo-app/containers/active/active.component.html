@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="task-add-container">
+    <input type="text" [(ngModel)]="todo" class="input no-outline" placeholder="add details" />
+    <button (click)="addTask()">Add</button>
+  </div>
+
+  <div *ngFor="let todo of todoArr; let i = index" class="todo-container">
+    <input *ngIf="todoArr[i].completed === false" type="checkbox" class="checkbox"
+           [checked]="todo.completed" (click)="taskCompleted(i)" />
+    <div class="task" *ngIf="todoArr[i].completed === false">{{ todoArr[i].todo }}</div>
+  </div>
+</div>

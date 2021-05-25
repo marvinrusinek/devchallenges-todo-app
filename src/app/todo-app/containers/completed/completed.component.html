@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngFor="let todo of todoArr; let i = index" class="todo-container">
+    <input *ngIf="todo.completed" class="checkbox" type="checkbox" checked disabled />
+    <del *ngIf="todo.completed" class="task">{{ todoArr[i].todo }}</del>
+    <img *ngIf="todo.completed" src="assets/images/delete-outline.png" (click)="remove(i)" loading="lazy" />
+  </div>
+  <div class="button-container">
+    <button (click)="removeAll()">
+      <img src="assets/images/delete-outline-white.png" loading="lazy" />
+      <span>Delete all</span>
+    </button>
+  </div>
+</div>

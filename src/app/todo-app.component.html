@@ -1,0 +1,12 @@
+<main>
+  <app-header></app-header>
+  <app-menu
+    (eventEmitterActive)="showActive($event)"
+    (eventEmitterAll)="showAll($event)"
+    (eventEmitterCompleted)="showCompleted($event)"
+  ></app-menu>
+  <app-all [todoArr]="todoArr" (todoArrEvent)="update($event)" *ngIf="all"></app-all>
+  <app-active [todoArr]="todoArr" (todoArrEvent)="update($event)" *ngIf="active"></app-active>
+  <app-completed [todoArr]="todoArr" (todoArrCompleted)="update($event)" *ngIf="completed"></app-completed>
+  <app-footer></app-footer>
+</main>

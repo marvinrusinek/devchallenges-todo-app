@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.container {
+  display: grid;
+
+  .todo-container {
+    display: grid;
+    grid-template-columns: 34px 1fr 24px;
+    align-items: center;
+    justify-items: start;
+    margin-top: 30px;
+    margin-left: 32.5%;
+    width: 608px;
+    height: auto;
+
+    .checkbox {
+      width: 24px;
+      height: 24px;
+      margin-right: 7px;
+    }
+
+    .task {
+      font: 500 18px "Montserrat", sans-serif;
+      color: $black;
+    }
+  }
+
+  .button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+    margin-left: 27.5%;
+    width: 608px;
+    justify-items: end;
+
+    button {
+      width: 124px;
+      height: 40px;
+      font: 600 10px "Montserrat", sans-serif;
+      color: $white;
+      background-color: $flamingo;
+      border-radius: 4px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      span {
+        justify-self: start;
+      }
+    }
+  }
+}
+
+
+
+
